@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-main {
+  min-height: 85vh;
+}
+
+.title {
+  text-align: center;
+  padding: 2rem 0;
+  gap: .5rem;
+}
+
+.title>h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.title>span {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
