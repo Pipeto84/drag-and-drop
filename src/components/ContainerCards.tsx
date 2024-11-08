@@ -4,11 +4,14 @@ import { CardItem } from "./CardItem";
 interface Props {
   items: Data[];
   status: Status;
+  isDragging: boolean
+  handleDragging: (dragging: boolean) => void
 }
 
-export const ContainerCards = ({ items = [], status }: Props) => {
+export const ContainerCards = ({ items = [], status, isDragging, handleDragging }: Props) => {
+
   return (
-    <div className="layout-cards">
+    <div className={`layout-cards ${isDragging ? 'layout-dragging' : ''}`}>
       <p>{status} hero</p>
       {
         items.map(
@@ -17,6 +20,7 @@ export const ContainerCards = ({ items = [], status }: Props) => {
             <CardItem 
               data={item} 
               key={item.id} 
+              handleDragging={handleDragging}
             />
           )
         )

@@ -68,11 +68,10 @@ body {
   text-transform: capitalize;
 }
 
-
-/* .layout-dragging {
+.layout-dragging {
   background: #ffffff17;
   border: 2px dashed #ffffff8c;
-} */
+}
 
 /* SINGLE CARD */
 .card-container {
