@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Itim&family=Rubik+Wet+Paint&display=swap'); */
 
 * {
   margin: 0;
@@ -9,63 +10,63 @@
 body {
   background-color: #1a1a1a;
   color: #f2f2f2;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Rubik Wet Paint','Montserrat', sans-serif;
   font-weight: normal;
 }
 
-/* .flex {
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-} */
+}
 
-/* .container-main {
+.container-main {
   min-height: 85vh;
-} */
+}
 
 /* TITLE */
-/* .title {
+.title {
   text-align: center;
   padding: 2rem 0;
   gap: .5rem;
-} */
+}
 
-/* .title>h1 {
+.title>h1 {
   font-size: 3.5rem;
   font-weight: 900;
-} */
+}
 
-/* .title>span {
+.title>span {
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-weight: lighter;
-} */
+}
 
 /* LAYOUT CARDS */
-/* .grid {
+.grid {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   padding: 0 2rem;
   width: 100%;
-} */
+}
 
-/* .layout-cards {
+.layout-cards {
   border: 2px solid #ffffff8c;
   border-radius: 5px;
   transition: all .3s linear;
-} */
+}
 
-/* .layout-cards>p {
+.layout-cards>p {
   border-radius: 5px;
   background-color: black;
   text-align: center;
   padding: 1rem 0;
   font-weight: bold;
   text-transform: capitalize;
-} */
+}
 
 
 /* .layout-dragging {
@@ -74,16 +75,21 @@ body {
 } */
 
 /* SINGLE CARD */
-/* .card-container {
+.card-container {
   margin: 1rem 1rem 0 1rem;
   background-color: slateblue;
   border-radius: 5px;
   padding: 1rem;
   cursor: pointer;
   animation: fadeIn .3s ease-in-out;
-} */
+}
 
-/* @keyframes fadeIn {
+.card-container>p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -93,13 +99,7 @@ body {
     opacity: 1;
     transform: translateY(0)
   }
-} */
-
-/* .card-container>p {
-  font-weight: bold;
-  font-size: 1.5rem;
-} */
-
+}
 
 /* @media screen and (max-width: 800px) { */
 
