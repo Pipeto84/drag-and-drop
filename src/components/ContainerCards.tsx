@@ -6,6 +6,7 @@ interface Props {
   items: Data[];
   isDragging: boolean;
   handleDragging: (dragging: boolean) => void;
+  handleUpdateList: (id: number, status: Status) => void
 }
 
 export const ContainerCards = ({
@@ -13,6 +14,7 @@ export const ContainerCards = ({
   items = [],
   isDragging,
   handleDragging,
+  handleUpdateList
 }: Props) => {
   return (
     <div className={`layout-cards ${isDragging ? "layout-dragging" : ""}`}>
