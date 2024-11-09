@@ -1,3 +1,4 @@
+import React from "react";
 import { Status, Data } from "../interfaces";
 import { CardItem } from "./CardItem";
 
@@ -16,8 +17,24 @@ export const ContainerCards = ({
   handleDragging,
   handleUpdateList
 }: Props) => {
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+  }
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    const id = +e.dataTransfer.getData('text')
+    handleUpdateList(id, status)
+    handleDragging(false)
+  }
+
   return (
-    <div className={`layout-cards ${isDragging ? "layout-dragging" : ""}`}>
+    <div 
+      className={`layout-cards ${isDragging ? "layout-dragging" : ""}`}
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+    >
       <p>{status} hero</p>
       {items.map(
         (item) =>
