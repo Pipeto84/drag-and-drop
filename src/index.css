@@ -64,3 +64,28 @@ body {
   font-weight: bold;
   text-transform: capitalize;
 }
+
+.card-container {
+  margin: 1rem 1rem 0 1rem;
+  background-color: slateblue;
+  border-radius: .3125rem;
+  padding: 1rem;
+  cursor: pointer;
+  animation: fadeIn .3s ease-in-out;
+}
+
+.card-container>p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
