@@ -1,9 +1,11 @@
-
+import { Title } from './components/Title'
+import { DragAndDrop } from './components/DragAndDrop'
 
 const App = () => {
   return (
-    <div>
-      
+    <div className='container-main flex'>
+      <Title />
+      <DragAndDrop />
     </div>
   )
 }
