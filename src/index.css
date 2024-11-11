@@ -94,3 +94,19 @@ body {
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 50rem) {
+  
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .layout-cards {
+    overflow-y: scroll;
+    height: 15.625rem;
+    min-height: 9.375rem;
+    max-height: 15.625rem;
+  }
+  
+}
