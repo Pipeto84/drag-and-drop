@@ -100,18 +100,17 @@ body {
   }
 }
 
-/* @media screen and (max-width: 800px) { */
+@media screen and (max-width: 800px) {
 
-
-  /* .grid {
+  .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  } */
+  }
 
-  /* .layout-cards {
+  .layout-cards {
     overflow-y: scroll;
-    height: 250px;
-    min-height: 150px;
-    max-height: 250px;
-  } */
-/* } */
+    height: 15.625rem;
+    min-height: 9.375rem;
+    max-height: 15.625rem;
+  }
+}
