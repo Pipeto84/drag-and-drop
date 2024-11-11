@@ -1,43 +1,25 @@
-import { Status, Data } from '../interfaces';
-import { ContainerCards } from './ContainerCards';
-import { data } from '../assets'
-import { useState } from 'react';
+import { Status } from "../interfaces";
+import { ContainerCards } from "./ContainerCards";
+import { useDragAndDrop } from "../hooks/useDragAndDrop";
+import { data } from "../assets/index";
 
-const typesHero: Status[] = ['good', 'bad', 'normal']
+const typesHero: Status[] = ["good", "bad", "normal"];
 
 export const DragAndDrop = () => {
-
-  const [isDragging, setIsDragging] = useState(false);
-  const [listItems, setListItems] = useState<Data[]>(data);
-
-  const handleDragging = (dragging: boolean) => setIsDragging(dragging);
-
-  const handleUpdateList = (id: number, status: Status) => {
-    let card = listItems.find(item => item.id === id);
-
-    if(card && card.status !== status) {
-      card.status = status;
-      setListItems(prev => ([
-        card!,
-        ...prev.filter(item => item.id !== id)
-      ]))
-    }
-  }
+  const { isDragging, listItems, handleDragging, handleUpdateList } = useDragAndDrop(data);
 
   return (
-    <div className='grid'>
-      {
-        typesHero.map(container => (
-          <ContainerCards
-            status={container}
-            key={container}
-            items={listItems}
-            isDragging={isDragging}
-            handleDragging={handleDragging}
-            handleUpdateList={handleUpdateList}
-          />
-        ))
-      }
+    <div className="grid">
+      {typesHero.map((container) => (
+        <ContainerCards
+          status={container}
+          key={container}
+          items={listItems}
+          isDragging={isDragging}
+          handleDragging={handleDragging}
+          handleUpdateList={handleUpdateList}
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
